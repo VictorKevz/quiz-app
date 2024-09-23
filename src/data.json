@@ -1,0 +1,160 @@
+{
+    "quiz": {
+      "HTML": [
+        {
+          "question": "What does HTML stand for?",
+          "choices": ["Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Text Markup Language", "Hyperlinking Text Marking Language"],
+          "correct": "Hyper Text Markup Language"
+        },
+        {
+          "question": "Which of the following is the correct way to create a link in HTML?",
+          "choices": ["<a url='http://example.com'>Example</a>", "<a href='http://example.com'>Example</a>", "<link href='http://example.com'>Example</link>", "<a link='http://example.com'>Example</a>"],
+          "correct": "<a href='http://example.com'>Example</a>"
+        },
+        {
+          "question": "Which HTML element is used to define the title of a document?",
+          "choices": ["<meta>", "<head>", "<title>", "<body>"],
+          "correct": "<title>"
+        },
+        {
+          "question": "How can you make a numbered list in HTML?",
+          "choices": ["<ul>", "<dl>", "<list>", "<ol>"],
+          "correct": "<ol>"
+        },
+        {
+          "question": "What is the correct HTML element for the largest heading?",
+          "choices": ["<heading>", "<h1>", "<head>", "<h6>"],
+          "correct": "<h1>"
+        },
+        {
+          "question": "Which HTML attribute is used to define inline styles?",
+          "choices": ["class", "style", "font", "styles"],
+          "correct": "style"
+        },
+        {
+          "question": "What is the correct way to embed an image in HTML?",
+          "choices": ["<img href='image.jpg'>", "<img url='image.jpg'>", "<img src='image.jpg'>", "<image src='image.jpg'>"],
+          "correct": "<img src='image.jpg'>"
+        },
+        {
+          "question": "Which tag is used to create a table in HTML?",
+          "choices": ["<div>", "<td>", "<table>", "<tr>"],
+          "correct": "<table>"
+        },
+        {
+          "question": "How can you open a link in a new tab?",
+          "choices": ["<a href='url' new>", "<a href='url' open='_blank'>", "<a href='url' target='_blank'>", "<a href='url' target='new_tab'>"],
+          "correct": "<a href='url' target='_blank'>"
+        },
+        {
+          "question": "What does the <p> tag represent in HTML?",
+          "choices": ["paragraph", "print", "part", "parameter"],
+          "correct": "paragraph"
+        }
+      ],
+      "CSS": [
+        {
+          "question": "What does CSS stand for?",
+          "choices": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+          "correct": "Cascading Style Sheets"
+        },
+        {
+          "question": "Which property is used to change the background color in CSS?",
+          "choices": ["color", "background-color", "bgcolor", "background"],
+          "correct": "background-color"
+        },
+        {
+          "question": "Which CSS property is used to control the text size?",
+          "choices": ["font-size", "text-style", "text-size", "font-style"],
+          "correct": "font-size"
+        },
+        {
+          "question": "How do you make text bold in CSS?",
+          "choices": ["font-style: bold;", "font-weight: bold;", "text-weight: bold;", "font-bold: true;"],
+          "correct": "font-weight: bold;"
+        },
+        {
+          "question": "How do you select an element with the class name 'example' in CSS?",
+          "choices": ["#example", ".example", "example", "class-example"],
+          "correct": ".example"
+        },
+        {
+          "question": "Which property is used to change the font of an element?",
+          "choices": ["text-style", "font-weight", "font-family", "font-style"],
+          "correct": "font-family"
+        },
+        {
+          "question": "Which CSS property is used to change the text color of an element?",
+          "choices": ["font-color", "text-color", "color", "text-style"],
+          "correct": "color"
+        },
+        {
+          "question": "How do you center a block element horizontally?",
+          "choices": ["text-align: center;", "margin: auto;", "margin-left: center;", "align: center;"],
+          "correct": "margin: auto;"
+        },
+        {
+          "question": "Which CSS property controls the space between lines of text?",
+          "choices": ["line-height", "letter-spacing", "text-indent", "word-spacing"],
+          "correct": "line-height"
+        },
+        {
+          "question": "Which of the following is the correct CSS syntax?",
+          "choices": ["body {color: black;}", "{body;color:black;}", "body:color=black;", "body={color:black;}"],
+          "correct": "body {color: black;}"
+        }
+      ],
+      "JavaScript": [
+        {
+          "question": "What is the correct syntax for referring to an external script?",
+          "choices": ["<script href='script.js'>", "<script name='script.js'>", "<script src='script.js'>", "<script link='script.js'>"],
+          "correct": "<script src='script.js'>"
+        },
+        {
+          "question": "How do you write 'Hello World' in an alert box?",
+          "choices": ["msg('Hello World');", "alert('Hello World');", "msgBox('Hello World');", "alertBox('Hello World');"],
+          "correct": "alert('Hello World');"
+        },
+        {
+          "question": "Which of the following is a JavaScript data type?",
+          "choices": ["string", "number", "boolean", "All of the above"],
+          "correct": "All of the above"
+        },
+        {
+          "question": "What is the correct way to create a function in JavaScript?",
+          "choices": ["function = myFunction()", "function:myFunction()", "function myFunction()", "create myFunction()"],
+          "correct": "function myFunction()"
+        },
+        {
+          "question": "How can you add a comment in JavaScript?",
+          "choices": ["<!-- This is a comment -->", "// This is a comment", "' This is a comment", "/* This is a comment */"],
+          "correct": "// This is a comment"
+        },
+        {
+          "question": "What is the correct way to write an array in JavaScript?",
+          "choices": ["var colors = (1:'red', 2:'green', 3:'blue')", "var colors = ['red', 'green', 'blue']", "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", "var colors = 'red', 'green', 'blue'"],
+          "correct": "var colors = ['red', 'green', 'blue']"
+        },
+        {
+          "question": "Which operator is used to assign a value to a variable?",
+          "choices": ["-", "=", "+", "*"],
+          "correct": "="
+        },
+        {
+          "question": "Which of the following methods can be used to find an HTML element by its ID?",
+          "choices": ["getElementById()", "getElementByClass()", "getElementByTag()", "querySelector()"],
+          "correct": "getElementById()"
+        },
+        {
+          "question": "What is the output of 'typeof []' in JavaScript?",
+          "choices": ["object", "array", "null", "undefined"],
+          "correct": "object"
+        },
+        {
+          "question": "How do you round the number 7.25 to the nearest integer?",
+          "choices": ["Math.round(7.25)", "round(7.25)", "Math.rnd(7.25)", "Math.floor(7.25)"],
+          "correct": "Math.round(7.25)"
+        }
+      ]
+    }
+  }

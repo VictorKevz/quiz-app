@@ -1,0 +1,29 @@
+.header {
+  padding: 5rem 0;
+}
+.header-inner {
+ background-color: var(--dark-blue); 
+ border-radius: 1.5rem;
+ padding: 1rem 1.5rem;
+ box-shadow: 0 2rem 1rem -1.5rem #06152532;
+
+}
+.logo-wrapper,
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo-wrapper {
+  gap: 1rem;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--light-beige);
+}
+
+.toggle-icon {
+  color: var(--light-beige);
+}

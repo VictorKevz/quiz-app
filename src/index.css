@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --very-dark-blue: #061525;
+  --dark-blue: #0e2945;
+  --light-blue: #205295;
+  --very-light-blue: #589cd9;
+  --beige: #e2e2b68e;
+  --light-beige: #e2e2b6;
+  --green: rgb(102, 149, 102);
+  --red: rgb(218, 127, 127);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.632);
+}
+
+h1,
+h2 {
+  color: var(--light-beige);
+}
+/* Light Mode Classes */
+.bg-light {
+  background-color: #f1f1f1;
+}
+.card-bg-light {
+  background-color: #e6e4e4;
+  box-shadow: 0 2rem 1rem -1.5rem #06152532;
+}
+.heading-text-light {
+  color: var(--dark-blue);
+}
+.header-icons-light {
+  color: var(--very-light-blue);
+}
+.label-bg-light {
+  background-color: #f1f1f1;
+  box-shadow: 0 2rem 1rem -1.5rem #06152532;
+  color: var(--dark-blue);
+  border-color: var(--light-blue);
+}
+.btn-light {
+  background-color: var(--light-blue);
+  color: var(--light-beige);
+}
+.score-text-light {
+  color: var(--very-light-blue);
+}
+.option-light {
+  border-color: var(--light-blue); 
+}
+
+/* ...................Responsiveness................. */
+@media (width <=799px) {
+ .container.field-container{
+  flex-direction: column;
+  gap: 3rem;
+ } 
+ .inner-container{
+padding: 5rem 1.5rem;
+ }
+ .submit-btn{
+  align-self: center;
+ }
+}
+@media (width <=470px) {
+.header-inner.container{
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+}
