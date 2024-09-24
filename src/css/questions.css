@@ -90,6 +90,7 @@
     align-items: center;
     justify-content: center;
     z-index: 50;
+    padding: 0 1.5rem;
 }
 .toast-wrapper{
     display: flex;

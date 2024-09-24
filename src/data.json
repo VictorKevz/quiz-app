@@ -7,9 +7,9 @@
           "correct": "Hyper Text Markup Language"
         },
         {
-          "question": "Which of the following is the correct way to create a link in HTML?",
-          "choices": ["<a url='http://example.com'>Example</a>", "<a href='http://example.com'>Example</a>", "<link href='http://example.com'>Example</link>", "<a link='http://example.com'>Example</a>"],
-          "correct": "<a href='http://example.com'>Example</a>"
+          "question": "How do you create a link in HTML?",
+          "choices": ["<a url='...'>Link</a>", "<a href='...'>Link</a>", "<link href='...'>Link</link>", "<a link='...'>Link</a>"],
+          "correct": "<a href='...'>Link</a>"
         },
         {
           "question": "Which HTML element is used to define the title of a document?",
@@ -131,9 +131,14 @@
           "correct": "// This is a comment"
         },
         {
-          "question": "What is the correct way to write an array in JavaScript?",
-          "choices": ["var colors = (1:'red', 2:'green', 3:'blue')", "var colors = ['red', 'green', 'blue']", "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", "var colors = 'red', 'green', 'blue'"],
-          "correct": "var colors = ['red', 'green', 'blue']"
+          "question": "How do you create an array in JavaScript?",
+          "choices": [
+            "var arr = [1, 2, 3]",
+            "var arr = (1, 2, 3)",
+            "var arr = '1', '2', '3'",
+            "var arr = 1:2:3"
+          ],
+          "correct": "var arr = [1, 2, 3]"
         },
         {
           "question": "Which operator is used to assign a value to a variable?",
