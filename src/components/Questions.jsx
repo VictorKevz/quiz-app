@@ -1,10 +1,13 @@
-import React, { useState, useId } from "react";
+import React, { useState, useId, useEffect } from "react";
+import { motion,AnimatePresence } from "framer-motion";
 import DoDisturbIcon from "@mui/icons-material/DoDisturb";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import HomeIcon from "@mui/icons-material/Home";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
+
+import { toastVariants } from "../variants";
 import data from "../data.json";
 import "../css/questions.css";
 
@@ -13,6 +16,9 @@ function Questions({ selectedSubject, onRestart, checked }) {
   const [answeredQuestions, setAnsweredQuestions] = useState({});
   const [count, setCount] = useState(0);
   const total = data.quiz[selectedSubject].length;
+  const currentQuestionAnswered = answeredQuestions[index] || {};
+
+  const [showToast, setToast] = useState(false);
 
   const correctAnswer = data.quiz[selectedSubject][index].correct;
   // Update navigation............................
@@ -41,13 +47,23 @@ function Questions({ selectedSubject, onRestart, checked }) {
     }
   };
 
-  const resetState = () => {
-    setAnsweredQuestions({});
-    setCount(0);
-    setIndex(0);
-  };
+  // const resetState = () => {
+  //   setAnsweredQuestions({});
+  //   setCount(0);
+  //   setIndex(0);
+  // };
+  useEffect(() => {
+    if (index + 1 === total && currentQuestionAnswered.isAnswered) {
+      setToast(true);
+      handleToast();
+    }
+  }, [index, total, currentQuestionAnswered]);
 
-  const currentQuestionAnswered = answeredQuestions[index] || {};
+  const handleToast = () => {
+    setTimeout(() => {
+      setToast(false);
+    }, 4000);
+  };
 
   return (
     <section className={`questions-wrapper`}>
@@ -70,7 +86,9 @@ function Questions({ selectedSubject, onRestart, checked }) {
             return (
               <li
                 key={useId()}
-                className={`option ${!checked && "option-light"} ${isAnswered && isCorrect ? "correct" : ""} 
+                className={`option ${!checked && "option-light"} ${
+                  isAnswered && isCorrect ? "correct" : ""
+                } 
                 ${isAnswered && isSelected && !isCorrect ? "wrong" : ""}
                 
                 `}
@@ -137,7 +155,26 @@ function Questions({ selectedSubject, onRestart, checked }) {
             </button>
           )}
         </div>
+       
       </div>
+      {showToast && (
+          <div className="toast-container">
+            <AnimatePresence mode="wait">
+            <motion.div 
+            className="toast-wrapper"
+            variants={toastVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            >
+            <h3 className="toast-title">Thank You!👍🏽</h3>
+            <p className="totast-parag">
+              🎉🥳Congratulations for completing the quiz!!
+            </p>
+          </motion.div>
+          </AnimatePresence>
+          </div>
+        )}
     </section>
   );
 }

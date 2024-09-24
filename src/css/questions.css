@@ -1,10 +1,14 @@
 .questions-wrapper,.questions-container{
     width: 100%;
+
+}
+.questions-wrapper{
+    position: relative;
+
 }
 .questions-container{
     display: flex;
     flex-direction: column;
-   
     
 }
 .question{
@@ -74,4 +78,37 @@
 }
 .option:hover:not(.wrong,.correct){
     border-color: var(--very-light-blue);
+}
+.toast-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(150, 195, 130, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+.toast-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  1.5rem;
+    background-color: var(--very-light-blue);
+    border-radius: 1.2rem;
+    
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    z-index: 100;
+}
+.toast-title{
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+.totast-parag{
+    color: rgb(224, 219, 219);
 }
