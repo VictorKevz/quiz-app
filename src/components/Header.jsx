@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from "react";
-import schoolIcon from "../assets/images/school-icon.svg"
+import schoolIcon from "../assets/images/school-icon.svg";
 import Switch from "@mui/material/Switch";
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import "../css/header.css";
 
 function Header({ checked, setChecked }) {
+ 
+    //Update the theme
   const handleChange = (event) => {
-    setChecked(event.target.checked);
+    const{checked} = event.target
+    setChecked(checked);
   };
   return (
     <header className={`header wrapper`}>
       <div className={`header-inner ${!checked && "card-bg-light"} container`}>
         <div className="logo-wrapper">
           <img src={schoolIcon} className="logo-icon" />
-          <h1 className={`logo-text ${!checked && "heading-text-light"}`}>Quiz App</h1>
+          <h1 className={`logo-text ${!checked && "heading-text-light"}`}>
+            Quiz App
+          </h1>
         </div>
         <div className="toggle-container">
-        <LightModeIcon fontSize="large" className={`toggle-icon ${!checked && "header-icons-light"}`}/>
-        <Switch
+          <LightModeIcon
+            fontSize="large"
+            className={`toggle-icon ${!checked && "header-icons-light"}`}
+          />
+          <Switch
             checked={checked}
             onChange={handleChange}
             inputProps={{ "aria-label": "controlled" }}
           />
-          <DarkModeIcon fontSize="large" className={`toggle-icon ${!checked && "header-icons-light"}`}/>
+          <DarkModeIcon
+            fontSize="large"
+            className={`toggle-icon ${!checked && "header-icons-light"}`}
+          />
         </div>
       </div>
     </header>
